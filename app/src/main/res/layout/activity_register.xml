@@ -1,0 +1,45 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/white">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="Create Account" android:textColor="@color/text_primary" android:textSize="26sp" android:textStyle="bold"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:text="Join our community of lifesavers" android:textColor="@color/text_secondary" android:textSize="14sp"/>
+        <!--  Full Name  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="Full Name">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  Email  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="Email Address">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_email" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textEmailAddress"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  Phone  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="Phone Number (10 digits)">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_phone" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="phone" android:maxLength="10"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  Blood Group Spinner  -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:text="Blood Group" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+        <Spinner android:id="@+id/spinner_blood_group" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginBottom="12dp" android:background="@drawable/bg_spinner" android:padding="8dp"/>
+        <!--  City  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="City">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_city" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  State  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="State">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_state" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapWords"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  Password  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp" app:passwordToggleEnabled="true" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="Password (min 6 chars)">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_password" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  Confirm Password  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" app:passwordToggleEnabled="true" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="Confirm Password">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_confirm_password" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--  Donor Checkbox  -->
+        <CheckBox android:id="@+id/cb_is_donor" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24dp" android:buttonTint="@color/blood_red" android:checked="true" android:text="Register as Blood Donor" android:textColor="@color/text_primary" android:textSize="15sp"/>
+        <!--  Register Button  -->
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_register" android:layout_width="match_parent" android:layout_height="56dp" android:text="CREATE ACCOUNT" android:textSize="16sp" app:backgroundTint="@color/blood_red" app:cornerRadius="8dp"/>
+        <ProgressBar android:id="@+id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="12dp" android:visibility="gone" android:indeterminateTint="@color/blood_red"/>
+        <!--  Login Link  -->
+        <TextView android:id="@+id/tv_login" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="20dp" android:layout_marginBottom="24dp" android:text="Already have an account? Login" android:textColor="@color/blood_red" android:textSize="14sp"/>
+    </LinearLayout>
+</ScrollView>

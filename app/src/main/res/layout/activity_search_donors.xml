@@ -1,0 +1,20 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/background" android:orientation="vertical">
+    <!--  Filter Bar  -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/blood_red" android:orientation="vertical" android:padding="16dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12dp" android:text="Search Donors" android:textColor="@color/white" android:textSize="20sp" android:textStyle="bold"/>
+        <!--  Blood Group Spinner  -->
+        <Spinner android:id="@+id/spinner_blood_group" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginBottom="10dp" android:background="@drawable/bg_spinner_white" android:padding="8dp"/>
+        <!--  City Filter  -->
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:hint="Filter by City" app:boxStrokeColor="@color/white" app:hintTextColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_city" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapWords" android:textColor="@color/white"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/btn_search" android:layout_width="match_parent" android:layout_height="46dp" android:layout_marginTop="10dp" android:text="SEARCH" app:backgroundTint="#B71C1C" app:cornerRadius="8dp"/>
+    </LinearLayout>
+    <!--  Progress  -->
+    <ProgressBar android:id="@+id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center" android:layout_marginTop="24dp" android:indeterminateTint="@color/blood_red" android:visibility="gone"/>
+    <!--  No Results  -->
+    <TextView android:id="@+id/tv_no_results" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:gravity="center" android:text="No donors found.\nTry a different search." android:textColor="@color/text_secondary" android:textSize="15sp" android:visibility="gone"/>
+    <!--  Donors RecyclerView  -->
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler_donors" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingTop="8dp" android:paddingBottom="16dp" android:clipToPadding="false"/>
+</LinearLayout>

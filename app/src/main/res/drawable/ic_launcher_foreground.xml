@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Blood drop shape -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,20 C54,20 32,46 32,62 A22,22 0,0,0 76,62 C76,46 54,20 54,20 Z" />
+
+    <!-- Plus/cross symbol inside the blood drop -->
+    <path
+        android:fillColor="#D32F2F"
+        android:pathData="M51,50 L51,42 L57,42 L57,50 L65,50 L65,56 L57,56 L57,64 L51,64 L51,56 L43,56 L43,50 Z" />
+
+</vector>

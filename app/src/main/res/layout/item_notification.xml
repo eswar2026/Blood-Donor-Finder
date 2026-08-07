@@ -1,0 +1,15 @@
+
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginHorizontal="12dp" android:layout_marginVertical="4dp" app:cardCornerRadius="10dp" app:cardElevation="2dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:padding="14dp">
+        <!--  Unread indicator  -->
+        <View android:id="@+id/view_unread" android:layout_width="6dp" android:layout_height="6dp" android:layout_marginEnd="10dp" android:background="@drawable/circle_red" android:visibility="visible"/>
+        <!--  Bell Icon  -->
+        <ImageView android:layout_width="36dp" android:layout_height="36dp" android:layout_marginEnd="12dp" android:background="@color/blood_red_light" android:padding="8dp" android:src="@drawable/ic_notification" android:tint="@color/blood_red"/>
+        <!--  Text  -->
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+            <TextView android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Notification Title" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tv_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:maxLines="2" android:ellipsize="end" android:text="Notification message goes here" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+            <TextView android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="12 Jan, 10:30 AM" android:textColor="@color/divider" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
